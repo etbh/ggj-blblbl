@@ -8,10 +8,10 @@ public class Cadavre : MonoBehaviour {
 	{
 		Vector2 p = transform.position;
 		
-		Coins [0] = new Vector2 (p.x-2, p.y-0.5f);
-		Coins [1] = new Vector2 (p.x+2, p.y-0.5f);
-		Coins [2] = new Vector2 (p.x+2, p.y+0.5f);
-		Coins [3] = new Vector2 (p.x-2, p.y+0.5f);
+		Coins [0] = new Vector2 (p.x-(transform.localScale.x)/2, p.y-(transform.localScale.y)/2);
+		Coins [1] = new Vector2 (p.x+(transform.localScale.x)/2, p.y-(transform.localScale.y)/2);
+		Coins [2] = new Vector2 (p.x+(transform.localScale.x)/2, p.y+(transform.localScale.y)/2);
+		Coins [3] = new Vector2 (p.x-(transform.localScale.x)/2, p.y+(transform.localScale.y)/2);
 		
 		Coins[0] = transform.rotation*(Coins[0]-p);
 		Coins[1] = transform.rotation*(Coins[1]-p);
@@ -21,6 +21,7 @@ public class Cadavre : MonoBehaviour {
 
 	void Start () {
 		CalculCoordonees ();
+
 	}
 	
 	// Update is called once per frame

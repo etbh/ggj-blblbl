@@ -4,18 +4,10 @@ using System.Collections;
 public class Cops : PNJ {
 	// Use this for initialization
 	void Start () {
-		cops = new ArrayList ();
-		GameObject[] copstemp = GameObject.FindGameObjectsWithTag ("cop");
-		foreach(GameObject cop in copstemp)
-		{
-			Cops c = Instantiate(cop) as Cops;
-			cops.Add(c);
-		}
 		Radius = 5.0;
 		AngleB = 0.0;
 		AngleT = 60.0*(Mathf.PI/180);
-		p.x = 50.0f;
-		p.y = 50.0f;
+		p = transform.position;
 	}
 
 	public override IEnumerator CallCops(Vector2 pos)
