@@ -2,9 +2,82 @@ fileFormatVersion: 2
 guid: 02bdef8f5743e664aa4fadfe8b178553
 TextureImporter:
   fileIDToRecycleName:
-    21300000: civilian1_walk1
-    21300002: civilian1_walk2
-    21300004: civilian1_walk3
+    21300000: Civilian1_walk1
+    21300002: Civilian1_walk2
+    21300004: Civilian1_walk3
+    21300006: Civilian1_walk4
+    21300008: Civilian1_walk5
+    21300010: Civilian1_walk6
+    21300012: Civilian1_walk7
+    21300014: Civilian1_walk8
+    21300016: Civilian2_walk1
+    21300018: Civilian2_walk2
+    21300020: Civilian2_walk3
+    21300022: Civilian2_walk4
+    21300024: Civilian2_walk5
+    21300026: Civilian2_walk6
+    21300028: Civilian2_walk7
+    21300030: Civilian2_walk8
+    21300032: Civilian3_walk1
+    21300034: Civilian3_walk2
+    21300036: Civilian3_walk3
+    21300038: Civilian3_walk4
+    21300040: Civilian3_walk5
+    21300042: Civilian3_walk6
+    21300044: Civilian3_walk7
+    21300046: Civilian3_walk8
+    21300048: Civilian4_walk1
+    21300050: Civilian4_walk2
+    21300052: Civilian4_walk3
+    21300054: Civilian4_walk4
+    21300056: Civilian4_walk5
+    21300058: Civilian4_walk6
+    21300060: Civilian4_walk7
+    21300062: Civilian4_walk8
+    21300064: Zombie1_walk1
+    21300066: Zombie1_walk2
+    21300068: Zombie1_walk3
+    21300070: Zombie1_walk4
+    21300072: Zombie1_walk5
+    21300074: Zombie1_walk6
+    21300076: Zombie1_walk7
+    21300078: Zombie1_walk8
+    21300080: Zombie1_hit1
+    21300082: Zombie1_hit2
+    21300084: Zombie2_hit1
+    21300086: Zombie2_hit1
+    21300088: Zombie2_walk1
+    21300090: Zombie2_walk2
+    21300092: Zombie2_walk3
+    21300094: Zombie2_walk4
+    21300096: Zombie2_walk5
+    21300098: Zombie2_walk6
+    21300100: Zombie2_walk7
+    21300102: Zombie2_walk8
+    21300104: Cop1_walk1
+    21300106: Zombie2_hit2
+    21300108: Cop1_walk2
+    21300110: Cop1_walk3
+    21300112: Cop1_walk4
+    21300114: Cop1_walk5
+    21300116: Cop1_walk6
+    21300118: Cop1_walk7
+    21300120: Cop1_walk8
+    21300122: Cop1_hit1
+    21300124: Cop2_walk1
+    21300126: Cop2_walk2
+    21300128: Cop2_walk3
+    21300130: Cop2_walk4
+    21300132: Cop2_walk5
+    21300134: Cop2_walk6
+    21300136: Cop2_walk7
+    21300138: Cop2_walk8
+    21300140: Cop2_hit1
+    21300142: Bubble_brain
+    21300144: Bubble_call_cop
+    21300146: Bubble_dont_pass
+    21300148: Bubble_!
+    21300150: Bubble_?
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -46,7 +119,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: civilian1_walk1
+    - name: Civilian1_walk1
       rect:
         serializedVersion: 2
         x: 3
@@ -56,7 +129,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: civilian1_walk2
+    - name: Civilian1_walk2
       rect:
         serializedVersion: 2
         x: 1
@@ -66,13 +139,733 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: civilian1_walk3
+    - name: Civilian1_walk3
       rect:
         serializedVersion: 2
         x: 1
         y: 224
         width: 27
         height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian1_walk4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 196
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian1_walk5
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 164
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian1_walk6
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 132
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian1_walk7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 96
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian1_walk8
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 68
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian2_walk1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 294
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian2_walk2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 262
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian2_walk3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 224
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian2_walk4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 198
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian2_walk5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 166
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian2_walk6
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 134
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian2_walk7
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 96
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian2_walk8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 70
+        width: 28
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian3_walk1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 293
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian3_walk2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 260
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian3_walk3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 224
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian3_walk4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 196
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian3_walk5
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 165
+        width: 26
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian3_walk6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 132
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian3_walk7
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 96
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian3_walk8
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 68
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian4_walk1
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 291
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian4_walk2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 259
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian4_walk3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian4_walk4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 195
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian4_walk5
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 163
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian4_walk6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 131
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian4_walk7
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 96
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Civilian4_walk8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 67
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_walk1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 294
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_walk2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 262
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_walk3
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 225
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_walk4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 198
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_walk5
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 165
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_walk6
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 133
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_walk7
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 96
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_walk8
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 69
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_hit1
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 38
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie1_hit2
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 1
+        width: 30
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_hit1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 37
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_hit2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 1
+        width: 30
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_walk1
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 292
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_walk2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 260
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_walk3
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 224
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_walk4
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 196
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_walk5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 164
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_walk6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 132
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_walk7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 96
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Zombie2_walk8
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 68
+        width: 30
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_walk1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 292
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_walk2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 260
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_walk3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_walk4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 195
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_walk5
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 163
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_walk6
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 131
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_walk7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 96
+        width: 28
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_walk8
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 66
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop1_hit1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 27
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_walk1
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 291
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_walk2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 259
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_walk3
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 224
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_walk4
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 194
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_walk5
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 163
+        width: 26
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_walk6
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 131
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_walk7
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 96
+        width: 27
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_walk8
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 66
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Cop2_hit1
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 27
+        width: 28
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bubble_brain
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 45
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bubble_call_cop
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 45
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bubble_dont_pass
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 45
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bubble_!
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 12
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bubble_?
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 12
+        width: 19
+        height: 20
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
