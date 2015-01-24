@@ -25,6 +25,18 @@ TextureImporter:
     21300040: "Pav\xE9s"
     21300042: Egouts_3
     21300044: Rond_mega_point
+    21300046: Dirt
+    21300048: Trottoir_4
+    21300050: Crack1
+    21300052: Crack2
+    21300054: Road_bis1
+    21300056: Road_bis2
+    21300058: Road_bis3
+    21300060: Road_bis4
+    21300062: Bande_1
+    21300064: Bande_1
+    21300066: Stairs_1
+    21300068: Stairs_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -293,6 +305,126 @@ TextureImporter:
         y: 16
         width: 128
         height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dirt
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 275
+        width: 16
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Trottoir_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 254
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Crack1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 188
+        width: 14
+        height: 80
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Crack2
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 116
+        width: 25
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Road_bis1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 304
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Road_bis2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 287
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Road_bis3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 270
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Road_bis4
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 253
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bande_1
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 172
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bande_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 173
+        width: 16
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stairs_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 192
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Stairs_2
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 192
+        width: 16
+        height: 48
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
