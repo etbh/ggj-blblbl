@@ -13,6 +13,16 @@ TextureImporter:
     21300016: street_lamp_big
     21300018: Small_poubelle
     21300020: Fat_poubelle
+    21300022: Car_destroyed
+    21300024: Car
+    21300026: Button_on
+    21300028: Button_off
+    21300030: Buttonbis_on
+    21300032: Buttonbis_off
+    21300034: Vlc
+    21300036: Hole
+    21300038: Tree1
+    21300040: Tree2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -161,6 +171,106 @@ TextureImporter:
         y: 193
         width: 32
         height: 47
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Car_destroyed
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 116
+        width: 92
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Car
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 66
+        width: 92
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Button_on
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 176
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Button_off
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Buttonbis_on
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 32
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Buttonbis_off
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Vlc
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 228
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Hole
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 230
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree1
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 256
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tree2
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 256
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
