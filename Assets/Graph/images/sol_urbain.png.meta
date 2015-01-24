@@ -159,7 +159,7 @@ TextureImporter:
     - name: Grass_4
       rect:
         serializedVersion: 2
-        x: 33
+        x: 33f
         y: 287
         width: 16
         height: 16

@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: b211860e457f0e047ba9c42fec7e5d63
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: blood1
+    21300002: blood2
+    21300004: blood3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -42,6 +45,36 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: blood1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 244
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: blood2
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 227
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: blood3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 210
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
