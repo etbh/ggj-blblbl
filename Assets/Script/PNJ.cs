@@ -10,7 +10,10 @@ abstract public class PNJ : MonoBehaviour {
 	public ArrayList cops;
 	// Use this for initialization
 	void Start () {
-		cad = new Cadavre ();
+		Radius = 5.0;
+		AngleB = 0.0;
+		AngleT = 60.0*(Mathf.PI/180);
+		p = transform.position;
 	}
 
 	double min(double a, double b, double c, double d)
@@ -120,17 +123,19 @@ abstract public class PNJ : MonoBehaviour {
 		//Déterminer l'angle min qui voit tout le cadavre
 		double a, b, c, d;
 		float x, y;
-		x = (float)(cad.Coins[0].x - p.x);
-		y = (float)(cad.Coins[0].y - p.y);
+		cad.Coins[0].x = 0.0f;
+		p.x = 0.0f;
+		x = cad.Coins[0].x - p.x;
+		y = cad.Coins[0].y - p.y;
 		a = Mathf.Atan2 (y, x);
-		x = (float)(cad.Coins[1].x - p.x);
-		y = (float)(cad.Coins[1].x - p.x);
+		x = cad.Coins[1].x - p.x;
+		y = cad.Coins[1].x - p.x;
 		b = Mathf.Atan2 (y, x);
-		x = (float)(cad.Coins[2].x - p.x);
-		y = (float)(cad.Coins[2].x - p.x);
+		x = cad.Coins[2].x - p.x;
+		y = cad.Coins[2].x - p.x;
 		c = Mathf.Atan2 (y, x);
-		x = (float)(cad.Coins[3].x - p.x);
-		y = (float)(cad.Coins[3].x - p.x);
+		x = cad.Coins[3].x - p.x;
+		y = cad.Coins[3].x - p.x;
 		d = Mathf.Atan2 (y, x);
 		a = min (a, b, c, d);
 		b = max (a, b, c, d);
@@ -165,18 +170,21 @@ abstract public class PNJ : MonoBehaviour {
 				for(double i = a; i < b; i+=0.1)
 				{
 					RaycastHit2D r = Physics2D.Raycast(p, new Vector2(Mathf.Cos((float)i), Mathf.Sin((float)i)), (float)Radius);
-					GameObject o = r.collider.gameObject;
-
-					if(o.layer == 8)
+					if(r.collider != null)
 					{
-						vu = true;
-						break;
+						GameObject o = r.collider.gameObject;
+						if(o.layer == 8)
+						{
+							vu = true;
+							break;
+						}					
 					}
 				}
 				if(vu)
 				{
-					//Call Cops(centre);
-					//Change Path
+					Debug.Log("Cadavre trouvé! Alerte général!");
+					CallCops(centre);
+					ChangePath(centre);
 				}
 			}
 		}
