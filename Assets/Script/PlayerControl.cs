@@ -6,10 +6,11 @@ public class PlayerControl : MonoBehaviour {
 	public int playerid;
 	private bool grabbing = false;
 	private GameObject grabbed;
+	private Sprite[] sprites;
+	private int animpos = 0;
 	
 	void Start () {
-
-		
+		sprites = Resources.LoadAll<Sprite>("Pjs");
 	}
 
 	void Update () {
@@ -22,6 +23,17 @@ public class PlayerControl : MonoBehaviour {
 			Quaternion qrot = Quaternion.Euler(rotation);
 			//transform.rotation = new Quaternion(qrot.x, qrot.y, qrot.z, qrot.w);
 			transform.Rotate(new Vector3(0, 0, Quaternion.Angle(transform.rotation, qrot)));
+			foreach(Sprite sprite in sprites)
+				if (sprite.name == ("" + (char)('A' + playerid) + "_walk" + ( (animpos/10)%8 +1)))
+					GetComponent<SpriteRenderer>().sprite = sprite;
+					//Debug.Log ("YOUHOU :!!! !!!!" + sprite.name);
+			animpos++;
+
+		}
+		else{
+			foreach(Sprite sprite in sprites)
+				if (sprite.name == ("" + (char)('A' + playerid) + "_walk1"))
+					GetComponent<SpriteRenderer>().sprite = sprite;
 		}
 		transform.Translate(new Vector3(0, -translation.magnitude, 0) / 100);
 		if (grabbing){
