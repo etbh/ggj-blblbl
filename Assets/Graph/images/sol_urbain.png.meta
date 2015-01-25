@@ -131,6 +131,8 @@ TextureImporter:
     21300252: rock_milieu4
     21300254: rock_milieu5
     21300256: rock_milieu6
+    21300258: Roofbis_7
+    21300260: Roofbis_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -1457,6 +1459,26 @@ TextureImporter:
         serializedVersion: 2
         x: 240
         y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Roofbis_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 110
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Roofbis_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 93
         width: 16
         height: 16
       alignment: 0
