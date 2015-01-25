@@ -52,7 +52,7 @@ public class PlayerControl : MonoBehaviour {
 						GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
 
 				GetComponentsInChildren<Transform>()[1].rotation = Quaternion.Euler( rotation);
-				transform.Translate(speed * translation/100);
+				transform.Translate(grabbed.GetComponent<Cadavre>().howGrabbed() * speed * translation/100);
 
 				if ((GameObject.Find ("Cadavre").transform.position - transform.position).magnitude > 4){
 					Debug.Log ("Too bad");
@@ -83,7 +83,6 @@ public class PlayerControl : MonoBehaviour {
 				GetComponentsInChildren<Transform>()[1].rotation =
 					Quaternion.Euler(new Vector3(0,0, Mathf.Atan2(translation.x, -translation.y) * Mathf.Rad2Deg));
 
-				
 				transform.Translate(speed * translation/50);
 			}
 			animpos ++;
@@ -96,8 +95,9 @@ public class PlayerControl : MonoBehaviour {
 		}
 		if (grabbing){
 			Vector3 distance  =(transform.position - grabbed.transform.position);
-			if (distance.magnitude > .3)
-				grabbed.transform.Translate(speed * distance / 50);
+			if (distance.magnitude > .3){
+				grabbed.transform.Translate(grabbed.GetComponent<Cadavre>().howGrabbed() * speed * distance / 50);
+			}
 		}
 
 	}

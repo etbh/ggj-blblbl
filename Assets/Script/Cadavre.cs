@@ -54,4 +54,7 @@ public class Cadavre : MonoBehaviour {
 		gameObject.GetComponent<SpriteRenderer>().sprite = Resources.LoadAll<Sprite>("Pjs")
 			.Where(s => s.name == ((grabs[0] || grabs[1]) ? "Body_carried" : "Body_down")).First();
 	}
+	public int howGrabbed(){
+		return (grabs[0]?1:0) + (grabs[1]?1:0);
+	}
 }
