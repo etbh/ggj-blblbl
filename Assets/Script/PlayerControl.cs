@@ -15,19 +15,25 @@ public class PlayerControl : MonoBehaviour {
 		sprites = Resources.LoadAll<Sprite>("Pjs");
 	}
 
+
 	void Update () {
 		float horizontal = Input.GetAxis("Horizontal - J" + playerid);
 		float vertical = Input.GetAxis("Vertical - J" + playerid);
+		horizontal = Mathf.Abs(horizontal)<.7 ? 0 : horizontal;
+		vertical = Mathf.Abs(vertical)<.7 ?0 : vertical;
 		Vector3 translation = new Vector3(horizontal, vertical, 0);
 
+		//Debug.Log(horizontal);
+
 		bool hold = Input.GetAxis("Hold - J" + playerid) > 0.5;
+		Debug.Log(hold);
 
 		if (!grabbing && hold)
 			grab();
 		if (grabbing && !hold)
 			release();
 		//Debug.Log(grabbing);
-		
+		//Debug.Log (translation.magnitude);
 		if (translation.magnitude > 0){
 			Vector3 rotation = transform.rotation.eulerAngles;
 
@@ -84,14 +90,14 @@ public class PlayerControl : MonoBehaviour {
 
 		}
 		else{
-//			foreach(Sprite sprite in sprites)
-//				if (sprite.name == ("" + (char)('A' + playerid) + "_walk1"))
-//					GetComponentsInChildren<SpriteRenderer>().sprite = sprite;
+			foreach(Sprite sprite in sprites)
+				if (sprite.name == ("" + (char)('A' + playerid) + "_walk1"))
+					GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
 		}
 		if (grabbing){
 			Vector3 distance  =(transform.position - grabbed.transform.position);
 			if (distance.magnitude > .3)
-				grabbed.transform.Translate(distance / 50);
+				grabbed.transform.Translate(speed * distance / 50);
 		}
 
 	}
