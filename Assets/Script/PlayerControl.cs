@@ -104,6 +104,9 @@ public class PlayerControl : MonoBehaviour {
 				grabbed.transform.Translate(mult * speed * distance / 50);
 			}
 		}
+		if(Input.GetKey("joystick button 0")){
+			Application.LoadLevel(Application.loadedLevelName);
+		}
 	}
 
 	void grab() {
