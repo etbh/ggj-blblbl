@@ -79,8 +79,6 @@ public class AIcop : MonoBehaviour {
                     }
                 }
             }
-
-            Debug.Log(currentWaypoint + " " + retour);
         }
 
         moveToward(waypoints[currentWaypoint].transform.position);
@@ -114,7 +112,30 @@ public class AIcop : MonoBehaviour {
             //si le flic abandonne les recherches
             if (abandonneRecherche && playerWaypoints.Count >= distanceAbandon)
             {
-
+                if (!retour)
+                {
+                    if (currentWaypoint == playerWaypoints.Count - 1)
+                    {
+                        retour = true;
+                        currentWaypoint--;
+                    }
+                    else
+                    {
+                        currentWaypoint++;
+                    }
+                }
+                else
+                {
+                    if (currentWaypoint == 0)
+                    {
+                        retour = false;
+                        currentWaypoint++;
+                    }
+                    else
+                    {
+                        currentWaypoint--;
+                    }
+                }
             }
             else
             {
@@ -122,30 +143,6 @@ public class AIcop : MonoBehaviour {
             }
 
             moveToward(playerWaypoints[currentWaypoint].transform.position);
-            if (!retour)
-            {
-                if (currentWaypoint == playerWaypoints.Count - 1)
-                {
-                    retour = true;
-                    currentWaypoint--;
-                }
-                else
-                {
-                    currentWaypoint++;
-                }
-            }
-            else
-            {
-                if (currentWaypoint == 0)
-                {
-                    retour = false;
-                    currentWaypoint++;
-                }
-                else
-                {
-                    currentWaypoint--;
-                }
-            }
         }
     }
 
