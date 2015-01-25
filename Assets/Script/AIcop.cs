@@ -15,6 +15,9 @@ public class AIcop : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (waypoints.Count == 0)
+            return;
+
         retour = false;
         currentWaypoint = 0;
 
@@ -27,6 +30,9 @@ public class AIcop : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (waypoints.Count == 0)
+            return;
+
         Vector3 currentPosition = transform.position;
         Vector3 moveToward;
 
