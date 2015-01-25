@@ -75,7 +75,7 @@ public class PlayerControl : MonoBehaviour {
 //				if (angle != 0)
 //					Debug.Log(angle);
 //				transform.Rotate(new Vector3(0, 0, angle));
-				string spritename = ("" + (char)('A' + playerid) + "_walk" + 
+				string spritename = ("" + (char)('A' + playerid) + "_walk" +
 				                     ( 1+ (anim_speed * animpos/10)% 8));
 				foreach(Sprite sprite in sprites)
 					if (sprite.name == spritename)
@@ -96,12 +96,12 @@ public class PlayerControl : MonoBehaviour {
 					GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
 		}
 		if (grabbing){
-			Vector3 distance  =(transform.position - grabbed.transform.position);
+			Vector3 distance  = translation;//(transform.position - grabbed.transform.position);
 			if (distance.magnitude > .3){
 				Cadavre corpse = grabbed.GetComponent<Cadavre>();
 				int mult = corpse == null ? 1 : corpse.howGrabbed();
 				grabbed.transform.rotation = Quaternion.Euler( new Vector3(0,0,0));
-				grabbed.transform.Translate(mult * speed * distance / 50);
+				grabbed.transform.Translate(mult * speed * distance / 100);
 			}
 		}
 		if(Input.GetKey("joystick button 0")){
