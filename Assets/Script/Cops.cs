@@ -32,6 +32,7 @@ public class Cops : PNJ {
 	public override void ChangePath(Vector2 pos)
 	{
 		Vector2 v = pos;
+		//Go to v
 	}
 	
 	// Update is called once per frame
