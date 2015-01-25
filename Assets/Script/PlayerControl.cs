@@ -52,7 +52,9 @@ public class PlayerControl : MonoBehaviour {
 						GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
 
 				GetComponentsInChildren<Transform>()[1].rotation = Quaternion.Euler( rotation);
-				transform.Translate(grabbed.GetComponent<Cadavre>().howGrabbed() * speed * translation/100);
+				Cadavre corpse = grabbed.GetComponent<Cadavre>();
+				int mult = corpse == null ? 1 : corpse.howGrabbed();
+				transform.Translate(mult * speed * translation/100);
 
 				if ((GameObject.Find ("Cadavre").transform.position - transform.position).magnitude > 4){
 					Debug.Log ("Too bad");
@@ -88,7 +90,7 @@ public class PlayerControl : MonoBehaviour {
 			animpos ++;
 
 		}
-		else{
+		else {
 			foreach(Sprite sprite in sprites)
 				if (sprite.name == ("" + (char)('A' + playerid) + "_walk1"))
 					GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
@@ -96,10 +98,12 @@ public class PlayerControl : MonoBehaviour {
 		if (grabbing){
 			Vector3 distance  =(transform.position - grabbed.transform.position);
 			if (distance.magnitude > .3){
-				grabbed.transform.Translate(grabbed.GetComponent<Cadavre>().howGrabbed() * speed * distance / 50);
+				Cadavre corpse = grabbed.GetComponent<Cadavre>();
+				int mult = corpse == null ? 1 : corpse.howGrabbed();
+				grabbed.transform.rotation = Quaternion.Euler( new Vector3(0,0,0));
+				grabbed.transform.Translate(mult * speed * distance / 50);
 			}
 		}
-
 	}
 
 	void grab() {
@@ -116,7 +120,9 @@ public class PlayerControl : MonoBehaviour {
 				Debug.Log ("Grabbed");
 				grabbed = collider.gameObject;
 				grabbing = true;
-				grabbed.GetComponent<Cadavre>().Grab(playerid);
+				Cadavre corpse = grabbed.GetComponent<Cadavre>();
+				if (corpse != null)
+					corpse.Grab(playerid);
 			}
 		}
 
@@ -128,6 +134,8 @@ public class PlayerControl : MonoBehaviour {
 	void release(){
 
 		grabbing = false;
-		grabbed.GetComponent<Cadavre>().Ungrab(playerid);
+		Cadavre corpse = grabbed.GetComponent<Cadavre>();
+		if (corpse != null)
+			corpse.Ungrab(playerid);
 	}
 }
