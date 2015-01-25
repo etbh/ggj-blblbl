@@ -4,6 +4,8 @@ using System.Collections;
 public class PlayerControl : MonoBehaviour {
 
 	public int playerid;
+	public float speed = 1;
+	public float anim_speed = 1;
 	private bool grabbing = false;
 	private GameObject grabbed;
 	private Sprite[] sprites;
@@ -19,16 +21,16 @@ public class PlayerControl : MonoBehaviour {
 		Vector3 translation = new Vector3(horizontal, vertical, 0);
 
 		bool hold = Input.GetAxis("Hold - J" + playerid) > 0.5;
-		//Debug.Log(hold);
+
 		if (!grabbing && hold)
 			grab();
 		if (grabbing && !hold)
 			release();
-
+		//Debug.Log(grabbing);
+		
 		if (translation.magnitude > 0){
 			Vector3 rotation = transform.rotation.eulerAngles;
 
-			transform.Translate(translation/100);
 
 			if (grabbing){
 				Vector3 toCadaver = GameObject.Find ("Cadavre").transform.position - transform.position;
@@ -37,13 +39,19 @@ public class PlayerControl : MonoBehaviour {
 //				transform.Translate(transform.rotation * translation  / 100);
 //				Debug.Log (transform.rotation.eulerAngles);
 //				//transform.Rotate(new Vector3(0, 0, Quaternion.Angle(transform.rotation, Quaternion.Euler(rotation))));
-//				string spritename = ("" + (char)('A' + playerid) + "_grab"  + 
-//				                     ( (animpos/10)% 4) +1)  ;
-//				foreach(Sprite sprite in sprites)
-//					if (sprite.name == spritename)
-//						GetComponent<SpriteRenderer>().sprite = sprite;
+				string spritename = ("" + (char)('A' + playerid) + "_grab"  + 
+				                     (1 + (anim_speed * animpos/10)% 4));
+				foreach(Sprite sprite in sprites)
+					if (sprite.name == spritename)
+						GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
 
 				GetComponentsInChildren<Transform>()[1].rotation = Quaternion.Euler( rotation);
+				transform.Translate(speed * translation/100);
+
+				if ((GameObject.Find ("Cadavre").transform.position - transform.position).magnitude > 4){
+					Debug.Log ("Too bad");
+					release();
+				}
 
 
 			}
@@ -59,17 +67,18 @@ public class PlayerControl : MonoBehaviour {
 //				if (angle != 0)
 //					Debug.Log(angle);
 //				transform.Rotate(new Vector3(0, 0, angle));
-//				string spritename = ("" + (char)('A' + playerid) + "_walk" + 
-//				                     ( (animpos/10)% 8) +1)  ;
-//				foreach(Sprite sprite in sprites)
-//					if (sprite.name == spritename)
-//						GetComponent<SpriteRenderer>().sprite = sprite;
-//				transform.Translate(new Vector3(0, -translation.magnitude, 0) / 100);
+				string spritename = ("" + (char)('A' + playerid) + "_walk" + 
+				                     ( 1+ (anim_speed * animpos/10)% 8));
+				foreach(Sprite sprite in sprites)
+					if (sprite.name == spritename)
+						GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
 
 
-				//Debug.Log(GetComponentsInChildren<Transform>().Length);
 				GetComponentsInChildren<Transform>()[1].rotation =
 					Quaternion.Euler(new Vector3(0,0, Mathf.Atan2(translation.x, -translation.y) * Mathf.Rad2Deg));
+
+				
+				transform.Translate(speed * translation/50);
 			}
 			animpos ++;
 
@@ -91,12 +100,17 @@ public class PlayerControl : MonoBehaviour {
 		Vector3 target = transform.position - GetComponentsInChildren<Transform>()[1].rotation * new Vector3(0, 1, 0) / 3;
 		//transform.position = target; // (was a test)
 
-		Collider2D[] colliders = Physics2D.OverlapPointAll(target);
+		Collider2D[] colliders = Physics2D.OverlapAreaAll(
+			new Vector2(target.x - 1, target.y -1),
+			new Vector2(target.x + 1, target.y +1)
+		);
 
 		foreach (Collider2D collider in colliders){
 			if (collider.gameObject.CompareTag("Grabbable")){
+				Debug.Log ("Grabbed");
 				grabbed = collider.gameObject;
 				grabbing = true;
+				grabbed.GetComponent<Cadavre>().Grab(playerid);
 			}
 		}
 
@@ -108,5 +122,6 @@ public class PlayerControl : MonoBehaviour {
 	void release(){
 
 		grabbing = false;
+		grabbed.GetComponent<Cadavre>().Ungrab(playerid);
 	}
 }
