@@ -98,4 +98,13 @@ public class AIcop : MonoBehaviour {
                              Quaternion.Euler(0, 0, targetAngle),
                              turnSpeed * Time.deltaTime);
     }
+
+    void huntingPlayer()
+    {
+        List<GameObject> playerWaypoints;
+    }
+
+    void killPlayer()
+    {
+    }
 }
