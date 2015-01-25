@@ -34,18 +34,18 @@ public class AIcop : MonoBehaviour {
         if (Vector3.Distance(waypoints[currentWaypoint].transform.position, currentPosition) < 1)
         {
             //Si le PNJ va toujours dans le même sens
-            if (tourneEnRond)
-            {
-                if(currentWaypoint == waypoints.Count - 1) {
-                    currentWaypoint = 0;
-                }
-                else
-                {
-                    currentWaypoint++;
-                }
-            }
-            else //gestion des allers retours
-            {
+            //if (tourneEnRond)
+            //{
+            //    if(currentWaypoint == waypoints.Count - 1) {
+            //        currentWaypoint = 0;
+            //    }
+            //    else
+            //    {
+            //        currentWaypoint++;
+            //    }
+            //}
+            //else //gestion des allers retours
+            //{
                 if (!retour)
                 {
                     if (currentWaypoint == waypoints.Count - 1)
@@ -70,7 +70,7 @@ public class AIcop : MonoBehaviour {
                         currentWaypoint--;
                     }
                 }
-            }
+            //}
 
             Debug.Log(currentWaypoint + " " + retour);
 
