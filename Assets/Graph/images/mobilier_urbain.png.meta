@@ -27,6 +27,11 @@ TextureImporter:
     21300044: Door2
     21300046: Door3
     21300048: Mini_tree
+    21300050: Car_y
+    21300052: "T\xE9l\xE9plot"
+    21300054: Parasol
+    21300056: Solrandom1
+    21300058: Solrandom2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -315,6 +320,56 @@ TextureImporter:
         y: 224
         width: 32
         height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Car_y
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 20
+        width: 90
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: "T\xE9l\xE9plot"
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 96
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Parasol
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 144
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Solrandom1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 213
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Solrandom2
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 199
+        width: 15
+        height: 8
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

@@ -10,7 +10,6 @@ public class Civil : PNJ {
 		AngleB = 0.0;
 		AngleT = 60.0*(Mathf.PI/180);
 		p = transform.position;
-		//cad = new Cadavre ();
 	}
 
 	public override IEnumerator CallCops(Vector2 pos)
