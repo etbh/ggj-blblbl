@@ -85,6 +85,32 @@ TextureImporter:
     21300160: oil
     21300162: Roofbis_5
     21300164: Roofbis_6
+    21300166: Water_1
+    21300168: Water2
+    21300170: Water3
+    21300172: sol_urbain_86
+    21300174: Water4
+    21300176: Water5
+    21300178: Roof_4
+    21300180: Water_6
+    21300182: Grass_6
+    21300184: Dust1
+    21300186: Dust2
+    21300188: Dust3
+    21300190: Dust4
+    21300192: Wooden_stick
+    21300194: Blood_4
+    21300196: Blood_5
+    21300198: Shit1
+    21300200: Shit2
+    21300202: Shit3
+    21300204: Shit4
+    21300206: Bus1
+    21300208: Bus2
+    21300210: Exit_left
+    21300212: Exit_right
+    21300214: Big_road_1
+    21300216: Big_road_2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -159,7 +185,7 @@ TextureImporter:
     - name: Grass_4
       rect:
         serializedVersion: 2
-        x: 33f
+        x: 33
         y: 287
         width: 16
         height: 16
@@ -953,6 +979,266 @@ TextureImporter:
         y: 127
         width: 16
         height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water_1
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 148
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 149
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 151
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sol_urbain_86
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 165
+        width: 2
+        height: 1
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 150
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 149
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Roof_4
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 253
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Water_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 290
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Grass_6
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 253
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dust1
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 306
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dust2
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 291
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dust3
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 275
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Dust4
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 260
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Wooden_stick
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 81
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blood_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 145
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Blood_5
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 147
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Shit1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 145
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Shit2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 145
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Shit3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 37
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Shit4
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bus1
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 17
+        width: 48
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Bus2
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Exit_left
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 38
+        width: 54
+        height: 25
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Exit_right
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 8
+        width: 53
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Big_road_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 96
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Big_road_2
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 48
+        width: 16
+        height: 96
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
