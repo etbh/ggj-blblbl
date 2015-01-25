@@ -14,6 +14,16 @@ abstract public class PNJ : MonoBehaviour {
 		AngleB = 0.0;
 		AngleT = 60.0*(Mathf.PI/180);
 		p = transform.position;
+		GameObject[] points = new GameObject[4];
+		points [0] = GameObject.Find ("Point5");
+		points [1] = GameObject.Find ("Point6");
+		points [2] = GameObject.Find ("Point7");
+		points [3] = GameObject.Find ("Point8");
+
+		points [0].transform.position = p;
+		points [1].transform.position = new Vector2 (Mathf.Cos(0f), Mathf.Sin(0f));
+		points [2].transform.position = new Vector2 ((float)(Radius)*Mathf.Cos((float)AngleT), (float)(Radius)*Mathf.Sin((float)AngleT));
+		points [3].transform.position = new Vector2 ((float)(Radius)*Mathf.Cos(30.0f*(Mathf.PI/180)), (float)(Radius)*Mathf.Sin(30.0f*(Mathf.PI/180)));
 	}
 
 	double min(double a, double b, double c, double d)
@@ -67,32 +77,8 @@ abstract public class PNJ : MonoBehaviour {
 		}
 	}
 	
-	double max(double a, double b, double c, double d)
+	double max(double b, double c, double d)
 	{
-		if (a > b) {
-			if(a>c)
-			{
-				if(a > d)
-				{
-					return a;
-				}
-				else
-				{
-					return d;
-				}
-			}
-			else
-			{
-				if(c > d)
-				{
-					return c;
-				}
-				else
-				{
-					return c;
-				}
-			}
-		} else {
 			if(b>c)
 			{
 				if(b > d)
@@ -115,7 +101,6 @@ abstract public class PNJ : MonoBehaviour {
 					return c;
 				}
 			}
-		}
 	}
 
 	public void CadavreVu()
@@ -123,48 +108,79 @@ abstract public class PNJ : MonoBehaviour {
 		//Déterminer l'angle min qui voit tout le cadavre
 		double a, b, c, d;
 		float x, y;
-		cad.Coins[0].x = 0.0f;
-		p.x = 0.0f;
 		x = cad.Coins[0].x - p.x;
 		y = cad.Coins[0].y - p.y;
 		a = Mathf.Atan2 (y, x);
+		//Debug.Log ("a=" + a);
 		x = cad.Coins[1].x - p.x;
-		y = cad.Coins[1].x - p.x;
+		y = cad.Coins[1].y - p.y;
 		b = Mathf.Atan2 (y, x);
+		//Debug.Log ("b=" + b);
 		x = cad.Coins[2].x - p.x;
-		y = cad.Coins[2].x - p.x;
+		y = cad.Coins[2].y - p.y;
 		c = Mathf.Atan2 (y, x);
+		//Debug.Log ("c=" + c);
 		x = cad.Coins[3].x - p.x;
-		y = cad.Coins[3].x - p.x;
+		y = cad.Coins[3].y - p.y;
 		d = Mathf.Atan2 (y, x);
-		a = min (a, b, c, d);
-		b = max (a, b, c, d);
-
+		//Debug.Log ("d=" + d);
+		double temp;
+		temp = min (a, b, c, d);
+		if (temp != a)
+		{
+			if(temp==b)
+			{
+				temp = a;
+				a = b;
+				b = temp;
+			} else if(temp==c)
+			{
+				temp = a;
+				a = c;
+				c = temp;
+			} else{
+				temp = a;
+				a = d;
+				d = temp;
+			}
+		}
+		temp = max (b, c, d);
+		if (temp != b) {
+			if(temp == c)
+			{
+				temp = b;
+				b = c;
+				c = temp;
+			} else
+			{
+				temp = b;
+				b = d;
+				d = temp;
+			}
+		}
 		//Distance assez courte?
-		Vector2 centre;
-		centre.x = (cad.Coins[2].x - cad.Coins[0].x)/2; 
-		centre.y = (cad.Coins[2].y - cad.Coins[0].y)/2;
-		float dist = Mathf.Sqrt(Mathf.Pow((float)(centre.x-p.x), 2) + Mathf.Pow((float)(centre.x-p.x), 2));
+		Vector2 centre = cad.transform.position;
+		//centre.x = (cad.Coins[2].x - cad.Coins[0].x)/2; 
+		//centre.y = (cad.Coins[2].y - cad.Coins[0].y)/2;
+		float dist = Mathf.Sqrt(Mathf.Pow((float)(centre.x-p.x), 2) + Mathf.Pow((float)(centre.y-p.y), 2));
 		if(dist<=Radius)
 		{
+			//Debug.Log("Cadavre a distance");
 			bool continuer = false;
 			//Est on dans la meme direction?
 			if((a>AngleB && a<(AngleB+AngleT)))
 			{
 				continuer = true;
 				b = AngleB+AngleT;
-			}
-			else if(b>AngleB && b<(AngleB+AngleT))
-			{
+			} else if(b>AngleB && b<(AngleB+AngleT)) {
 				continuer = true;
 				a = AngleB;
-			}
-			else if(a<AngleB && b>(AngleB+AngleT))
-			{
+			} else if(a<AngleB && b>(AngleB+AngleT)) {
 				continuer = true;
 			}
 			if(continuer)
 			{
+				Debug.Log("Cadavre dans ma direction");
 				bool vu = false;
 				//Visible ou obstacle?
 				for(double i = a; i < b; i+=0.1)
