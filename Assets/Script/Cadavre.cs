@@ -12,11 +12,11 @@ public class Cadavre : MonoBehaviour {
 		Coins [1] = new Vector2 (p.x+(box.size.x), p.y-(box.size.y));
 		Coins [2] = new Vector2 (p.x+(box.size.x), p.y+(box.size.y));
 		Coins [3] = new Vector2 (p.x-(box.size.x), p.y+(box.size.y));
-
-		/*Coins[0] = transform.rotation*(Coins[0]-p);
-		Coins[1] = transform.rotation*(Coins[1]-p);
-		Coins[2] = transform.rotation*(Coins[2]-p);
-		Coins[3] = transform.rotation*(Coins[3]-p);*/
+	
+		//Coins[0] = transform.rotation*(Coins[0]);
+		//Coins[1] = transform.rotation*(Coins[1]);
+		//Coins[2] = transform.rotation*(Coins[2]);
+		//Coins[3] = transform.rotation*(Coins[3]);
 
 
 		GameObject[] points = new GameObject[4];
@@ -24,8 +24,10 @@ public class Cadavre : MonoBehaviour {
 		points [1] = GameObject.Find ("Point2");
 		points [2] = GameObject.Find ("Point3");
 		points [3] = GameObject.Find ("Point4");
+
 		for(int i = 0; i < 4; i++)
 		{
+			Coins[i] = p+(Vector2)(transform.rotation*(Coins[i]-p));
 			points[i].transform.position = Coins[i];
 		}
 	}

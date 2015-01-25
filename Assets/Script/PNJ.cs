@@ -14,6 +14,7 @@ abstract public class PNJ : MonoBehaviour {
 		AngleB = 0.0;
 		AngleT = 60.0*(Mathf.PI/180);
 		p = transform.position;
+
 		GameObject[] points = new GameObject[4];
 		points [0] = GameObject.Find ("Point5");
 		points [1] = GameObject.Find ("Point6");
@@ -162,8 +163,13 @@ abstract public class PNJ : MonoBehaviour {
 		Vector2 centre = cad.transform.position;
 		//centre.x = (cad.Coins[2].x - cad.Coins[0].x)/2; 
 		//centre.y = (cad.Coins[2].y - cad.Coins[0].y)/2;
-		float dist = Mathf.Sqrt(Mathf.Pow((float)(centre.x-p.x), 2) + Mathf.Pow((float)(centre.y-p.y), 2));
-		if(dist<=Radius)
+		float distC = Mathf.Sqrt(Mathf.Pow((float)(centre.x-p.x), 2) + Mathf.Pow((float)(centre.y-p.y), 2));
+		float dist1, dist2, dist3, dist4;
+		dist1 = Mathf.Sqrt(Mathf.Pow((float)(cad.Coins[0].x-p.x), 2) + Mathf.Pow((float)(cad.Coins[0].y-p.y), 2));
+		dist2 = Mathf.Sqrt(Mathf.Pow((float)(cad.Coins[1].x-p.x), 2) + Mathf.Pow((float)(cad.Coins[1].y-p.y), 2));
+		dist3 = Mathf.Sqrt(Mathf.Pow((float)(cad.Coins[2].x-p.x), 2) + Mathf.Pow((float)(cad.Coins[2].y-p.y), 2));
+		dist4 = Mathf.Sqrt(Mathf.Pow((float)(cad.Coins[3].x-p.x), 2) + Mathf.Pow((float)(cad.Coins[3].y-p.y), 2));
+		if(distC<=Radius || dist1<=Radius || dist2<=Radius || dist3<=Radius || dist4<=Radius)
 		{
 			//Debug.Log("Cadavre a distance");
 			bool continuer = false;
@@ -180,10 +186,10 @@ abstract public class PNJ : MonoBehaviour {
 			}
 			if(continuer)
 			{
-				Debug.Log("Cadavre dans ma direction");
+				//Debug.Log("Cadavre dans ma direction");
 				bool vu = false;
 				//Visible ou obstacle?
-				for(double i = a; i < b; i+=0.1)
+				for(double i = a; i < b; i+=0.01)
 				{
 					RaycastHit2D r = Physics2D.Raycast(p, new Vector2(Mathf.Cos((float)i), Mathf.Sin((float)i)), (float)Radius);
 					if(r.collider != null)
