@@ -100,6 +100,10 @@ public class PlayerControl : MonoBehaviour {
 			}
 		}
 
+		if(Input.GetKey("joystick button 0")){
+			Application.LoadLevel(Application.loadedLevelName);
+		}
+
 	}
 
 	void grab() {
