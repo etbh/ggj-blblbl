@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class AIcop : MonoBehaviour {
     public float moveSpeed;
     public float turnSpeed;
+    public bool tourneEnRond;
 
     private Vector3 moveDirection;
     private int currentWaypoint;
@@ -32,29 +33,42 @@ public class AIcop : MonoBehaviour {
         //Si on est arrivé au waypoint
         if (Vector3.Distance(waypoints[currentWaypoint].transform.position, currentPosition) < 1)
         {
-            //gestion allé-retour
-            if (!retour)
+            //Si le PNJ va toujours dans le même sens
+            if (tourneEnRond)
             {
-                if (currentWaypoint == waypoints.Count - 1)
-                {
-                    retour = true;
-                    currentWaypoint--;
+                if(currentWaypoint == waypoints.Count - 1) {
+                    currentWaypoint = 0;
                 }
                 else
                 {
                     currentWaypoint++;
                 }
             }
-            else
+            else //gestion des allers retours
             {
-                if (currentWaypoint == 0)
+                if (!retour)
                 {
-                    retour = false;
-                    currentWaypoint++;
+                    if (currentWaypoint == waypoints.Count - 1)
+                    {
+                        retour = true;
+                        currentWaypoint--;
+                    }
+                    else
+                    {
+                        currentWaypoint++;
+                    }
                 }
                 else
                 {
-                    currentWaypoint--;
+                    if (currentWaypoint == 0)
+                    {
+                        retour = false;
+                        currentWaypoint++;
+                    }
+                    else
+                    {
+                        currentWaypoint--;
+                    }
                 }
             }
 
@@ -72,7 +86,7 @@ public class AIcop : MonoBehaviour {
         transform.position = Vector3.Lerp(currentPosition, target, Time.deltaTime);
 
         //rotation
-        float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+        float targetAngle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg + 90f;
         transform.rotation =
             Quaternion.Slerp(transform.rotation,
                              Quaternion.Euler(0, 0, targetAngle),
