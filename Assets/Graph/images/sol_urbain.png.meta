@@ -1274,7 +1274,6 @@ TextureImporter:
         serializedVersion: 2
         x: 47
         y: 110
->>>>>>> 391718735f46752e0d1176db67b225e2637ddff6
         width: 16
         height: 16
       alignment: 0
@@ -1465,13 +1464,16 @@ TextureImporter:
         serializedVersion: 2
         x: 240
         y: 80
-=======
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
     - name: Roofbis_8
       rect:
         serializedVersion: 2
         x: 47
         y: 93
->>>>>>> 391718735f46752e0d1176db67b225e2637ddff6
         width: 16
         height: 16
       alignment: 0
