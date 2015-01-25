@@ -111,6 +111,8 @@ TextureImporter:
     21300212: Exit_right
     21300214: Big_road_1
     21300216: Big_road_2
+    21300218: Roofbis_7
+    21300220: Roofbis_8
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -1239,6 +1241,26 @@ TextureImporter:
         y: 48
         width: 16
         height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Roofbis_7
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 110
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Roofbis_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 93
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
