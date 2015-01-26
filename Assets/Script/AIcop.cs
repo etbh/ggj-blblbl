@@ -17,6 +17,7 @@ public class AIcop : MonoBehaviour {
 
     public List<GameObject> waypoints;
     private List<GameObject> playerWaypoints;
+    private Cops scriptCops;
 
 	// Use this for initialization
 	void Start () {
@@ -26,6 +27,7 @@ public class AIcop : MonoBehaviour {
         retour = false;
         currentWaypoint = 0;
         currentPosition = transform.position;
+        scriptCops = gameObject.GetComponent<Cops>();
 
         moveToward(waypoints[currentWaypoint].transform.position);
 	}
@@ -37,51 +39,58 @@ public class AIcop : MonoBehaviour {
 
         currentPosition = transform.position;
 
-        //Si on est arrivé au waypoint
-        if (Vector3.Distance(waypoints[currentWaypoint].transform.position, currentPosition) < 1)
-        {
-            //Si le PNJ va toujours dans le même sens
-            if (tourneEnRond)
+        //si on a détecter le joueur avec le cadavre
+        //if (scriptCops.CadavreVu()) 
+        //{
+        //}
+        //else
+        //{
+            //Si on est arrivé au waypoint
+            if (Vector3.Distance(waypoints[currentWaypoint].transform.position, currentPosition) < 1)
             {
-                if (currentWaypoint == waypoints.Count - 1)
-                {
-                    currentWaypoint = 0;
-                }
-                else
-                {
-                    currentWaypoint++;
-                }
-            }
-            else //gestion des allers retours
-            {
-                if (!retour)
+                //Si le PNJ va toujours dans le même sens
+                if (tourneEnRond)
                 {
                     if (currentWaypoint == waypoints.Count - 1)
                     {
-                        retour = true;
-                        currentWaypoint--;
+                        currentWaypoint = 0;
                     }
                     else
                     {
                         currentWaypoint++;
                     }
                 }
-                else
+                else //gestion des allers retours
                 {
-                    if (currentWaypoint == 0)
+                    if (!retour)
                     {
-                        retour = false;
-                        currentWaypoint++;
+                        if (currentWaypoint == waypoints.Count - 1)
+                        {
+                            retour = true;
+                            currentWaypoint--;
+                        }
+                        else
+                        {
+                            currentWaypoint++;
+                        }
                     }
                     else
                     {
-                        currentWaypoint--;
+                        if (currentWaypoint == 0)
+                        {
+                            retour = false;
+                            currentWaypoint++;
+                        }
+                        else
+                        {
+                            currentWaypoint--;
+                        }
                     }
                 }
             }
-        }
 
-        moveToward(waypoints[currentWaypoint].transform.position);
+            moveToward(waypoints[currentWaypoint].transform.position);
+        //}
     }
 
     void huntingPlayer()
@@ -99,6 +108,39 @@ public class AIcop : MonoBehaviour {
         {
             moveToward(berniePosition);
         }
+        else//aucun joueur assez proche
+        {
+            //si le flic abandonne les recherches
+            //if (abandonneRecherche && playerWaypoints.Count >= distanceAbandon)
+            //{
+            //        if (currentWaypoint == playerWaypoints.Count - 1)
+            //        {
+            //            retour = true;
+            //            currentWaypoint--;
+            //        }
+            //        else
+            //        {
+            //            currentWaypoint++;
+            //        }
+            //        if (currentWaypoint == 0)
+            //        {
+            //            retour = false;
+            //            currentWaypoint++;
+            //        }
+            //        else
+            //        {
+            //            currentWaypoint--;
+            //        }
+            //}
+            //else
+            //{
+
+            //}
+            if (Vector3.Distance(waypoints[currentWaypoint].transform.position, currentPosition) < 1)
+                currentWaypoint++;
+
+            moveToward(playerWaypoints[currentWaypoint].transform.position);
+        }
         
         //Si le joueur s'est déplacé suffisament on cré un nouveau waypoint
         if (Vector3.Distance(berniePosition, berniePositionPrecedente) > distancePoursuiteJoueur)
@@ -106,43 +148,6 @@ public class AIcop : MonoBehaviour {
             GameObject tempWaypoint = new GameObject("tempWaypoint");
             tempWaypoint.transform.position = berniePosition;
             playerWaypoints.Add(tempWaypoint);
-        }
-        else //aucun joueur assez proche
-        {
-            //si le flic abandonne les recherches
-            if (abandonneRecherche && playerWaypoints.Count >= distanceAbandon)
-            {
-                if (!retour)
-                {
-                    if (currentWaypoint == playerWaypoints.Count - 1)
-                    {
-                        retour = true;
-                        currentWaypoint--;
-                    }
-                    else
-                    {
-                        currentWaypoint++;
-                    }
-                }
-                else
-                {
-                    if (currentWaypoint == 0)
-                    {
-                        retour = false;
-                        currentWaypoint++;
-                    }
-                    else
-                    {
-                        currentWaypoint--;
-                    }
-                }
-            }
-            else
-            {
-                
-            }
-
-            moveToward(playerWaypoints[currentWaypoint].transform.position);
         }
     }
 
