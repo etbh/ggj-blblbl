@@ -3,6 +3,8 @@ guid: 39ec5bdeb2f9161468299c207c28cabc
 TextureImporter:
   fileIDToRecycleName:
     21300000: Road_big_1
+    21300002: cedez_passage
+    21300004: stop
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,6 +53,26 @@ TextureImporter:
         y: 208
         width: 96
         height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cedez_passage
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 244
+        width: 48
+        height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: stop
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 244
+        width: 47
+        height: 60
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
