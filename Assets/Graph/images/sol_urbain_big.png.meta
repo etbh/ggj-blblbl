@@ -5,6 +5,9 @@ TextureImporter:
     21300000: Road_big_1
     21300002: cedez_passage
     21300004: stop
+    21300006: road_middle1
+    21300008: road_middle2
+    21300010: road_middle3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -73,6 +76,36 @@ TextureImporter:
         y: 244
         width: 47
         height: 60
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: road_middle1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 297
+        width: 34
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: road_middle2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 281
+        width: 34
+        height: 7
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: road_middle3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 265
+        width: 34
+        height: 7
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
