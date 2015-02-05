@@ -195,7 +195,7 @@ abstract public class PNJ : MonoBehaviour {
 					if(r.collider != null)
 					{
 						GameObject o = r.collider.gameObject;
-						if(o.layer == 8)
+						if(o.name == "Cadavre")
 						{
 							vu = true;
 							break;

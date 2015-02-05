@@ -52,7 +52,9 @@ public class PlayerControl : MonoBehaviour {
 						GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
 
 				GetComponentsInChildren<Transform>()[1].rotation = Quaternion.Euler( rotation);
-				transform.Translate(speed * translation/100);
+				Cadavre corpse = grabbed.GetComponent<Cadavre>();
+				int mult = corpse == null ? 1 : corpse.howGrabbed();
+				transform.Translate(mult * speed * translation/100);
 
 				if ((GameObject.Find ("Cadavre").transform.position - transform.position).magnitude > 4){
 					Debug.Log ("Too bad");
@@ -73,7 +75,7 @@ public class PlayerControl : MonoBehaviour {
 //				if (angle != 0)
 //					Debug.Log(angle);
 //				transform.Rotate(new Vector3(0, 0, angle));
-				string spritename = ("" + (char)('A' + playerid) + "_walk" + 
+				string spritename = ("" + (char)('A' + playerid) + "_walk" +
 				                     ( 1+ (anim_speed * animpos/10)% 8));
 				foreach(Sprite sprite in sprites)
 					if (sprite.name == spritename)
@@ -83,23 +85,28 @@ public class PlayerControl : MonoBehaviour {
 				GetComponentsInChildren<Transform>()[1].rotation =
 					Quaternion.Euler(new Vector3(0,0, Mathf.Atan2(translation.x, -translation.y) * Mathf.Rad2Deg));
 
-				
 				transform.Translate(speed * translation/50);
 			}
 			animpos ++;
 
 		}
-		else{
+		else {
 			foreach(Sprite sprite in sprites)
 				if (sprite.name == ("" + (char)('A' + playerid) + "_walk1"))
 					GetComponentsInChildren<SpriteRenderer>()[0].sprite = sprite;
 		}
 		if (grabbing){
-			Vector3 distance  =(transform.position - grabbed.transform.position);
-			if (distance.magnitude > .3)
-				grabbed.transform.Translate(speed * distance / 50);
+			Vector3 distance  = translation;//(transform.position - grabbed.transform.position);
+			if (distance.magnitude > .3){
+				Cadavre corpse = grabbed.GetComponent<Cadavre>();
+				int mult = corpse == null ? 1 : corpse.howGrabbed();
+				grabbed.transform.rotation = Quaternion.Euler( new Vector3(0,0,0));
+				grabbed.transform.Translate(mult * speed * distance / 100);
+			}
 		}
-
+		if(Input.GetKey("joystick button 0")){
+			Application.LoadLevel(Application.loadedLevelName);
+		}
 	}
 
 	void grab() {
@@ -116,7 +123,9 @@ public class PlayerControl : MonoBehaviour {
 				Debug.Log ("Grabbed");
 				grabbed = collider.gameObject;
 				grabbing = true;
-				grabbed.GetComponent<Cadavre>().Grab(playerid);
+				Cadavre corpse = grabbed.GetComponent<Cadavre>();
+				if (corpse != null)
+					corpse.Grab(playerid);
 			}
 		}
 
@@ -128,6 +137,8 @@ public class PlayerControl : MonoBehaviour {
 	void release(){
 
 		grabbing = false;
-		grabbed.GetComponent<Cadavre>().Ungrab(playerid);
+		Cadavre corpse = grabbed.GetComponent<Cadavre>();
+		if (corpse != null)
+			corpse.Ungrab(playerid);
 	}
 }
