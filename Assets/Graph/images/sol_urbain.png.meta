@@ -145,6 +145,8 @@ TextureImporter:
     21300280: stair1_gauche
     21300282: stair2_droit
     21300284: stair2_gauche
+    21300286: STOP_ecriture
+    21300288: rond_coin
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -164,7 +166,7 @@ TextureImporter:
   grayScaleToAlpha: 0
   generateCubemap: 0
   seamlessCubemap: 0
-  textureFormat: -1
+  textureFormat: -3
   maxTextureSize: 512
   textureSettings:
     filterMode: 0
@@ -1603,6 +1605,26 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: STOP_ecriture
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 49
+        width: 32
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rond_coin
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 138
+        width: 5
+        height: 5
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
