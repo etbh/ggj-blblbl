@@ -3,6 +3,9 @@ guid: 806b6b0a4a5280b4bbfb213b355cb14c
 TextureImporter:
   fileIDToRecycleName:
     21300000: epouvantail
+    21300002: rock_1
+    21300004: rock_2
+    21300006: rock_3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,6 +54,36 @@ TextureImporter:
         y: 292
         width: 35
         height: 19
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock_1
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 298
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock_2
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 291
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: rock_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 294
+        width: 12
+        height: 10
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
