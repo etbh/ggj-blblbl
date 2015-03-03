@@ -31,6 +31,15 @@ TextureImporter:
     21300052: big_bord_trottoir
     21300054: big_trottoir
     21300056: bigherbe
+    21300058: mare
+    21300060: Mare_big
+    21300062: toit_tole_1
+    21300064: toit_tole_2
+    21300066: toit_tole_3
+    21300068: toit_tole_4
+    21300070: toit_tole_5
+    21300072: toit_tole_6
+    21300074: tole_devanture
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -359,6 +368,96 @@ TextureImporter:
         y: 0
         width: 96
         height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mare
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 38
+        width: 21
+        height: 21
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mare_big
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 23
+        width: 51
+        height: 48
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: toit_tole_1
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: toit_tole_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 115
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: toit_tole_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 99
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: toit_tole_4
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 99
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: toit_tole_5
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 140
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: toit_tole_6
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 140
+        width: 17
+        height: 4
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tole_devanture
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 112
+        height: 40
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
