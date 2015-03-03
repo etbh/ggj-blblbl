@@ -29,17 +29,18 @@ TextureImporter:
     21300048: tuile_toit_fin
     21300050: tuile_toit
     21300052: big_bord_trottoir
-    21300054: big_trottoir
+    21300054: big_trottoir_sol
     21300056: bigherbe
-    21300058: mare
-    21300060: Mare_big
-    21300062: toit_tole_1
-    21300064: toit_tole_2
-    21300066: toit_tole_3
-    21300068: toit_tole_4
-    21300070: toit_tole_5
-    21300072: toit_tole_6
-    21300074: tole_devanture
+    21300058: big_trottoir
+    21300060: big_bord
+    21300062: mare_big
+    21300064: Devanture
+    21300066: Tole_1
+    21300068: Tole_2
+    21300070: Tole_3
+    21300072: Tole_4
+    21300074: Tole_toit
+    21300076: Tole_toit_coin
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -351,7 +352,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: big_trottoir
+    - name: big_trottoir_sol
       rect:
         serializedVersion: 2
         x: 224
@@ -371,17 +372,27 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: mare
+    - name: big_trottoir
       rect:
         serializedVersion: 2
-        x: 22
-        y: 38
-        width: 21
-        height: 21
+        x: 192
+        y: 96
+        width: 16
+        height: 96
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: Mare_big
+    - name: big_bord
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 96
+        width: 16
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: mare_big
       rect:
         serializedVersion: 2
         x: 55
@@ -391,7 +402,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: toit_tole_1
+    - name: Devanture
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 111
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Tole_1
       rect:
         serializedVersion: 2
         x: 120
@@ -401,7 +422,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: toit_tole_2
+    - name: Tole_2
       rect:
         serializedVersion: 2
         x: 136
@@ -411,7 +432,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: toit_tole_3
+    - name: Tole_3
       rect:
         serializedVersion: 2
         x: 120
@@ -421,7 +442,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: toit_tole_4
+    - name: Tole_4
       rect:
         serializedVersion: 2
         x: 136
@@ -431,7 +452,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: toit_tole_5
+    - name: Tole_toit
       rect:
         serializedVersion: 2
         x: 123
@@ -441,23 +462,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: toit_tole_6
+    - name: Tole_toit_coin
       rect:
         serializedVersion: 2
         x: 145
         y: 140
         width: 17
         height: 4
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: tole_devanture
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 32
-        width: 112
-        height: 40
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
